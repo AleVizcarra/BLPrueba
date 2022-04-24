@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/css.css" />
+    <link rel="shortcut icon" href="./public/images/iconoBL.png" type="image/x-icon"/>
+    <title>BL-Freestyle</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar__links">
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#quienes-somos">¿Quienes somos?</a>
+          </li>
+          <li>
+            <a href="#galeria">Galería</a>
+          </li>
+          <li>
+            <a href="#eventos">Eventos</a>
+          </li>
+          <li>
+            <a href="#contacto">Contacto</a>
+          </li>
+        </ul>
+
+        <div class="burger-button">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-section">
+      <div class="hero-section__overlay">
+        <img
+          class="hero-section__logo"
+          src="./public/images/bl-logo.png"
+          alt="BL Freestyle Logo"
+        />
+      </div>
+    </div>
+
+    <main>
+      <!-- QUIENES SOMOS -->
+      <div id="quienes-somos" class="contenedor quienessomos__contenedor">
+        <div class="contenedorseccion__tituloseccion titulo-quienes-somos">
+          <h2 class="subtitulo">Quienes<span>Somos</span></h2>
+        </div>
+
+        <div class="contenedorseccion__contenidoprincipal">
+          <p>
+            <span>BL Freestyle</span> es una organización dedicada a la cultura
+            del Freestyle desde la ciudad de Bolívar. Surgida a finales del año
+            2019, la iniciativa es impulsada por un grupo de competidores,
+            artistas y aficionados del ambiente local, logrando una gran
+            popularidad en la escena casi de inmediato.
+          </p>
+          <br />
+          <p>
+            El público, seguidores y participantes de las competencias
+            organizadas se incrementó durante los primeros meses de manera
+            exponencial, viéndose reflejado en la asistencia a los eventos como
+            en la interacción en sus redes sociales.
+          </p>
+          <br />
+          <p>
+            En 2021, logramos la incorporación al circuito de competencias
+            clasificatorias a la Freestyle Master Series (FMS) en la categoría
+            de Rango 4. Este suceso es un logro que no sólo visibiliza e instala
+            a la escena cultural bolivarense a nivel nacional e internacional
+            sino también a toda la localidad en el marco del alcance masivo y en
+            constante crecimiento de la cultura del Freestyle.
+          </p>
+          <br />
+          <p>
+            Con vista a futuro, en 2022 decidimos expandir la marca más allá de
+            la organización de batallas de freestyle. Aspiramos a armar un
+            proyecto sólido que cuente con múltiples disciplinas tanto
+            artísticas, como puede ser competencias de baile, y a su vez
+            educacionales, al armar un taller de freestyle para aquellos que
+            estén interesados en la práctica y aprendizaje del mismo.
+          </p>
+
+          <div class="quienessomos__integrantesbl__contenedor">
+            <!-- Template para generar las cards => NO SE RENDERIZA -->
+              <template id="template-card-integrante">
+                <div class="integrantesbl__card">
+                  <img
+                    class="card__img"
+                    src="https://images.unsplash.com/photo-1600962815726-457c46a12681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+                    alt="Francisco Langge"
+                    />
+                    <div class="integrantesbl__card--contenedor">
+                      <div class="integrantesbl__card--contenido">
+                        <div class="texto">
+                          <p class="tituloIntegrante">Francisco Langge</p>
+                        <span class="rolTrabajo"></span>
+                      </div>
+    
+                      <a
+                        href="https://www.instagram.com/franlangge/"
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-instagram card__icon"></i>
+                      </a>
+                    </div>
+                    <img class="flechaDesplegarInfoIntegrante" src="./public/frame.svg" alt="Click para desplegar">
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALERIA -->
+      <div id="galeria" class="contenedor galeria__contenedor">
+        <div class="contenedorseccion__tituloseccion titulo-galeria">
+          <h2 class="subtitulo">Galería<span>Fotos</span></h2>
+        </div>
+        <div class="contenedorseccion__contenidoprincipal">
+          <div class="galeria__fotos__contenedor">
+            <!-- FOTOS GENERADAS DINAMICAMENTE -->
+          </div>
+
+          <div class="galeria__videos__contenedor">
+            <!-- Acá se introducen los videos -->
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTOS -->
+      <div id="eventos" class="contenedor eventos__contenedor">
+        <div class="contenedorseccion__tituloseccion titulo-eventos">
+          <h2 class="subtitulo">Próximos<span>Eventos</span></h2>
+        </div>
+        <div class="contenedorseccion__contenidoprincipal">
+          <iframe
+            class="calendario__formato--mes"
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FArgentina%2FBuenos_Aires&title=Fechas%20de%20BL%20Freestyle%20&src=YmxmcmVlc3R5bGUyMDIwQGdtYWlsLmNvbQ&src=dDIwN2VjbnU3aDZxaTZzamo0cjk3MnM3dDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMtNDE5LmFyI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23616161&color=%2333B679&color=%230B8043"
+            style="border: solid 1px #777"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+
+          <iframe
+            class="calendario__formato--agenda"
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FArgentina%2FBuenos_Aires&mode=AGENDA&src=YmxmcmVlc3R5bGUyMDIwQGdtYWlsLmNvbQ&src=dDIwN2VjbnU3aDZxaTZzamo0cjk3MnM3dDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMtNDE5LmFyI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23616161&color=%2333B679&color=%230B8043"
+            style="border: solid 1px #777"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+
+          <iframe
+            src="https://www.google.com/maps/d/u/2/embed?mid=1p4dIUtlhI-SuipUQmHl5fivi4iOs_FEv&ehbc=2E312F"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- CONTACTOS -->
+      <div id="contacto" class="contendor contacto__contenedor">
+        <div class="contenedorseccion__tituloseccion titulo-contacto">
+          <h2 class="subtitulo">Contacto<span>BLFREESTYLE</span></h2>
+          <div></div>
+        </div>
+        <div
+          class="contenedorseccion__contenidoprincipal contenedorseccion__contenidoprincipal--contacto"
+        >
+          <div class="formulariocontacto__contenedor">
+            <div class="formulariocontacto__texto">
+              <p>
+                Escribinos tu consulta para que podamos ayudarte y brindarte más
+                información acerca de nuestros servicios.
+              </p>
+            </div>
+
+            <!-- **** CAMBIAR EMAIL **** -->
+            <form
+              class="form"
+              action="https://formsubmit.co/m_rossi93@hotmail.com"
+              method="POST"
+              target="_blank"
+            >
+              <input type="hidden" name="_subject" value="Nuevo email!" />
+
+              <div>
+                <label for="name">Nombre y Apellido:</label>
+                <input id="name" type="text" name="nombre" required />
+              </div>
+
+              <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="teléfono" />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required />
+              </div>
+
+              <div>
+                <label for="mensaje">Tu mensaje:</label>
+                <textarea
+                  name="mensaje"
+                  id="mensaje"
+                  rows="7"
+                  name="mensaje"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="contenedor__redes">
+        <a href="https://www.instagram.com/blfreestyle_/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/channel/UCNJuZAOHk7UhtGBVmiHX9lg"
+          target="_blank"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://www.twitch.tv/blfreestyle" target="_blank">
+          <i class="fa-brands fa-twitch"></i>
+        </a>
+
+        <a href="https://twitter.com/blfreestyle" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@blfreestyle_" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/company/bl-freestyle/?viewAsMember=true"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </footer>
+
+    <div class="body-overlay">
+      <div class="img-container">
+        <img src="#" alt="espacio para rellenar con una imágen" />
+      </div>
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
